@@ -16,3 +16,19 @@ def kontaktu_piev():
  numurs = input("Lūdzu, ievadiet kontakta numuru: ")
 
  kontakti.piev_kontaktu(vards, numurs)
+
+
+#Kontaktu atrašana gan pēc pilna vārda, gan pēc simboliem
+def kont_atrasana():
+  vards = input("Ivadi kontakta vārdu, kuru meklē: ")
+  numurs = kontakti.atrod_kont(vards)
+
+  if numurs:
+    print(f"{vards} numurs ir {numurs}")
+  else:
+    sakrit = kontakti.kont_mekl(vards)
+    if sakrit:
+      for k in sakrit:
+        print(f"{k} numurs ir {sakrit[k]}")
+    else:
+      print(f"Izskatās, ka {vards} nav sarakstā")

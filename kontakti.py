@@ -9,3 +9,13 @@ def piev_kontaktu(vards, tel_nr):
   else:
     db[vards] = tel_nr
     print(f"Pievienots kontakts: {vards} {tel_nr}")
+
+#Kontakta atrašana, ievadot pilnu vārdu
+def atrod_kont(vards):
+  numurs = db.get(vards)
+  return numurs
+
+#Kontakta atrašana pēc simboliem
+def kont_mekl(meklet):
+    sakrit_elementi = db.prefix(meklet)
+    return {k: db[k] for k in sakrit_elementi}
