@@ -19,3 +19,12 @@ def atrod_kont(vards):
 def kont_mekl(meklet):
     sakrit_elementi = db.prefix(meklet)
     return {k: db[k] for k in sakrit_elementi}
+
+
+#Tiek mainīts tikai kontakta numurs
+def mainit_numuru(iepr_vards, jaunais_numurs):
+  db[iepr_vards] = jaunais_numurs
+
+def mainit_kontaktu(iepr_vards, jaunais_numurs, jaunais_vards):
+  db[jaunais_vards] = jaunais_numurs
+  del db[iepr_vards]

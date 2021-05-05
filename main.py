@@ -32,3 +32,24 @@ def kont_atrasana():
         print(f"{k} numurs ir {sakrit[k]}")
     else:
       print(f"Izskatās, ka {vards} nav sarakstā")
+
+
+
+#Kontaktu rediģēšana
+def kontaktu_red():
+  iepr_vards = input("Ievadi kontakta vārdu, kuru nepieciešams rediģēt: ")
+  iepr_numurs = kontakti.atrod_kont(iepr_vards)
+
+  if iepr_numurs:
+    jaunais_vards = input(f"Ievadi kontakta vārdu (atstāj tukšu, ja nevēlies mainīt {iepr_vards})").strip()
+    jaunais_numurs = input(f"Ievadi kontakta numuru (atstāj tukšu, ja nevēlies mainīt {iepr_numurs})").strip()
+    if not jaunais_numurs:
+      jaunais_numurs = iepr_numurs
+    if not jaunais_vards:
+      kontakti.mainit_numuru(iepr_vards, jaunais_numurs)
+    else:
+      kontakti.mainit_kontaktu(iepr_vards,jaunais_numurs, jaunais_vards)
+
+  else:
+    print(f"Izskatās, ka {iepr_vards} neeksistē")
+
