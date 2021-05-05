@@ -28,3 +28,7 @@ def mainit_numuru(iepr_vards, jaunais_numurs):
 def mainit_kontaktu(iepr_vards, jaunais_numurs, jaunais_vards):
   db[jaunais_vards] = jaunais_numurs
   del db[iepr_vards]
+
+
+def dzest_kontaktu(vards):
+  del db[vards]

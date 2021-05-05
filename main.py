@@ -53,3 +53,14 @@ def kontaktu_red():
   else:
     print(f"Izskatās, ka {iepr_vards} neeksistē")
 
+
+def kont_dzesana():
+  vards = input("Ievadi kontakta vārdu, kuru vēlies dzēst: ")
+  kontakts = kontakti.atrod_kont(vards)
+
+  if kontakts:
+    print(f'{vards} tika izdzēsts.')
+    kontakti.dzest_kontaktu(vards)
+  else:
+    print(f'Izskatās, ka kontakts {vards} neeksistē')
+
