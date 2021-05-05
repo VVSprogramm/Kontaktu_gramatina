@@ -64,3 +64,21 @@ def kont_dzesana():
   else:
     print(f'Izskatās, ka kontakts {vards} neeksistē')
 
+
+#Lietotāja galvenā izvēlne
+def galvena_izv():
+  print(sakums)
+  izvele = input("Tava izvēlētā darbība: ").strip()
+  #.strip() - Noņem atstarpes
+
+  if izvele == "1":
+    kontaktu_piev()
+  elif izvele == "2":
+    kont_atrasana()
+  elif izvele == "3":
+    kontaktu_red()
+  elif izvele == "4":
+    kont_dzesana()
+  else:
+    print("Neeksistējoša darbība. Lūdzu, mēģiniet vēlreiz!")
+
