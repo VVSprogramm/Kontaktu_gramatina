@@ -82,3 +82,8 @@ def galvena_izv():
   else:
     print("Neeksistējoša darbība. Lūdzu, mēģiniet vēlreiz!")
 
+#Programmas cikls
+while True:
+  system("")
+  galvena_izv()
+  input("Nospied Enter, lai turpinātu:")
