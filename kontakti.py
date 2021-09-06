@@ -1,3 +1,6 @@
+#Veicu izmaiņas
+
+
 #kontakti.py fails satur koda daļu, kura veido datubāzi
 
 from replit import db
